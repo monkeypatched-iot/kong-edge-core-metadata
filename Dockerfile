@@ -45,8 +45,6 @@ ENV APP_PORT=59881
 EXPOSE $APP_PORT
 
 WORKDIR /
-COPY --from=builder /edgex-go/Attribution.txt /
-COPY --from=builder /edgex-go/security.txt /
 COPY --from=builder /edgex-go/cmd/core-metadata/core-metadata /
 COPY --from=builder /edgex-go/cmd/core-metadata/res/configuration.yaml /res/configuration.yaml
 COPY --from=builder /edgex-go/cmd/core-metadata/res/uom.yaml /res/uom.yaml
